@@ -25,7 +25,7 @@ class User(UserMixin):
 def load_user(username):
     # Connect to the PostgreSQL database
     try:
-        '''В 29 строке аргумент password необходимо изменить на Ваш пароль суперпользователя'''
+        '''В 29 строке аргумент password необходимо изменить на Ваш пароль от пользователя'''
         conn = psycopg2.connect(database='IP_in', user='postgres', host='localhost', port='5432', password='8989')
         cursor = conn.cursor()
         cursor.execute("SELECT name, password FROM Users")
