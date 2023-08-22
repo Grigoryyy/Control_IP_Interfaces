@@ -2,7 +2,7 @@
 
 sudo -i -u postgres
 "Ввод пароля sudo"
-createbd IP_in
+createdb IP_in
 psql IP_in
 CREATE TABLE Users (id SERIAL PRIMARY KEY, Name VARCHAR, Password VARCHAR);
 INSERT INTO Users (Name, Password) VALUES ('admin', 'password'), ('devops', 'devops');
