@@ -13,8 +13,13 @@
 После скачивания и распаковки файлов необходимо запустить от имени суперпользователя check_psql.py  
 Скрипт проверит наличие Postgresql и предложит установить его в случае отсутствия.
 
-Для создания базы данных для приложения выполните по порядку действия описанные в файле conf_DB.txt
-черех терминал.
+Для создания базы данных для приложения выполните по порядку действия:
+sudo -i -u postgres  
+"Ввод пароля sudo"  
+createdb IP_in  
+psql IP_in  
+CREATE TABLE Users (id SERIAL PRIMARY KEY, Name VARCHAR, Password VARCHAR);  
+INSERT INTO Users (Name, Password) VALUES ('admin', 'password'), ('devops', 'devops');
 
 Пропишите в терминале sudo apt update, sudo apt install python3-pip и запустите от имени суперпользователя файл library_installer.py для проверки необходимых библиотек, с которыми работает приложение,
 в случае отсутствия библиотек скрипт установит их.
